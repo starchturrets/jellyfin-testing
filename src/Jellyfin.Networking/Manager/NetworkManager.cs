@@ -100,11 +100,6 @@ public class NetworkManager : INetworkManager, IDisposable
 
         UpdateSettings(_configurationManager.GetNetworkConfiguration());
 
-        if (detectNetworkChange)
-        {
-            NetworkChange.NetworkAddressChanged += OnNetworkAddressChanged;
-            NetworkChange.NetworkAvailabilityChanged += OnNetworkAvailabilityChanged;
-        }
 
         _configurationManager.NamedConfigurationUpdated += ConfigurationUpdated;
     }
